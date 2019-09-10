@@ -1,0 +1,15 @@
+on: release
+name: Auto docs
+jobs:
+  jazzyDocs:
+    name: Jazzy docs
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Create docs
+        uses: nodes-vapor/github-actions/actions/jazzy-docs@develop
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITOR: nodes-vapor/submissions
+          SOURCEKITTEN_REVISION: 0.24.0
+          JAZZY_VERSION: 0.10.0
+          TARGET: Submissions
