@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Create docs
-        uses: nodes-vapor/github-actions/actions/jazzy-docs@develop
+        uses: emarashliev/github-actions/actions/jazzy-docs@develop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITOR: nodes-vapor/submissions
